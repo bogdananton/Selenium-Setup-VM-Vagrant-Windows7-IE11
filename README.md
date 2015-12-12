@@ -1,2 +1,9 @@
-# Selenium-Setup-VM-Vagrant-Windows7-IE11
-Box containing Selenium-Setup. Guest OS: Windows 7
+## Run from build
+
+```bash
+git clone https://github.com/bogdananton/Selenium-Setup-VM.git
+cd Selenium-Setup-VM\win
+vagrant up --provision
+```
+
+Then access via GUI, go to "\\VBOXSVR\vagrant" and run "bootstrap.ps1" using PowerShell (or _fix the provision call in Vagrantfile_).

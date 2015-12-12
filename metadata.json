@@ -1,0 +1,5 @@
+{
+  "name": "bogdananton/Selenium-Setup-VM-Win7-IE11",
+  "description": "Runs Selenium Server (guest port: 4444). Browsers: Google Chrome v47.0.2526.80 m (64-bit), Opera v34.0, Firefox v42.0, IE11 (installed but conflicting), PhantomJS v2.0.0, Selenium Server v2.48.2, JRE v8.0.66, PHP v5.6.3, PHPUnit v4.8.9, Chromedriver v2.20, IEDriver v2.48",
+  "provider": "virtualbox"
+}
