@@ -20,3 +20,7 @@ vagrant up
 Optional: map your host port to the guest's 4444
 
 Access: http://{guest-IP}:4444/wd/hub
+
+Disk space requirements:
+ - base box: 4.6GB
+ - running instance: 11GB
