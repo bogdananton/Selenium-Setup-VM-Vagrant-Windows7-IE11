@@ -49,6 +49,14 @@ Check to see that the process is running; start it by running "c:\tools\php\php.
 
 Open "http://localhost:4444/wd/hub" to check if the server is accessible. Change port to 4446 if accessing from outside.
 
+----
+
+Disk space requirements:
+ - base box: 4.6GB
+ - running instance: 11GB
+
+----
+
 ## Browsers
 
 * Opera 34.0.2036.25 stable (December 6, 2015)
