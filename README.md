@@ -1,4 +1,25 @@
-## Build from Github and run
+
+#### Run pre-built image
+
+Published on [atlas.hashicorp.com](https://atlas.hashicorp.com/bogdananton/boxes/selenium-setup-windows7_x64-ie11/versions/1.0.0/)
+
+```
+vagrant init bogdananton/selenium-setup-windows7_x64-ie11
+vagrant up
+```
+
+----
+
+The box was created by running:<br/>
+`vagrant package --base selenium-setup-windows7_x64-ie11 --output selenium-setup-windows7_x64-ie11`
+
+----
+
+Once started, the provision shouldn't require babysitting, as seen in http://asciinema.org/a/6dzvtvw7u6pknr65cenlg07tk
+
+----
+
+#### Build from Github and run
 
 ```bash
 # clone repo
@@ -22,42 +43,26 @@ powershell -NonInteractive -File c:\bootstrap.ps1
 # access via GUI, go to "\\VBOXSVR\vagrant" and run "bootstrap.ps1" using PowerShell
 
 # create a startup task to start Selenium at boot (should run "php c:\Selenium-Setup\selenium-setup start")
-
-
 ```
 
 ----
 
-The box was created by running:<br/>
-`vagrant package --base selenium-setup-windows7_x64-ie11 --output selenium-setup-windows7_x64-ie11`
+### Debug
 
-----
-
-Once started, the provision shouldn't require babysitting, as seen in http://asciinema.org/a/6dzvtvw7u6pknr65cenlg07tk
-
-
-## Run already build image
-
-```
-vagrant init bogdananton/Selenium-Setup-VM-Win7-IE11
-vagrant up
-```
-
-----
-
-Check to see that the process is running; start it by running "c:\tools\php\php.exe c:\Selenium-Setup\selenium-setup start".
+Start manually by running "c:\tools\php\php.exe c:\Selenium-Setup\selenium-setup start".
 
 Open "http://localhost:4444/wd/hub" to check if the server is accessible. Change port to 4446 if accessing from outside.
 
 ----
 
-Disk space requirements:
- - base box: 4.6GB
- - running instance: 11GB
+### Disk space requirements
+
+ * base box: 4.6GB
+ * running instance: 11GB
 
 ----
 
-## Browsers
+### Browsers
 
 * Opera 34.0.2036.25 stable (December 6, 2015)
 * Chrome 47.0.2526.105 m (December 15, 2015)
