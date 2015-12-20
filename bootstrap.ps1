@@ -1,8 +1,8 @@
+iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
+
 # disable UAC (after reboot)
 New-ItemProperty -Path HKLM:Software\Microsoft\Windows\CurrentVersion\policies\system -Name EnableLUA -PropertyType DWord -Value 0 -Force
-
-# download / install chocolatey
-iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
+Set-NetFirewallProfile -Profile * -Enabled False
 
 # install apps.
 # @todo allow installing a different version of ie (choose via environment variables on up --provision)
@@ -21,14 +21,14 @@ Add-Content c:\tools\php\php.ini "extension=php_openssl.dll"
 
 # clone
 cd /
-git clone https://github.com/bogdananton/Selenium-Setup.git
+git clone --branch 4.0 https://github.com/bogdananton/Selenium-Setup.git
 cd Selenium-Setup
 
 # start.
 # @todo specify port (via environment variables on up --provision)
 wget https://getcomposer.org/composer.phar -O c:\tools\php\composer.phar
 php c:\tools\php\composer.phar update
-php C:\Selenium-Setup\bin\selenium-setup.php start
+php C:\Selenium-Setup\selenium-setup start
 
 # debug
 Start-Sleep -s 10
